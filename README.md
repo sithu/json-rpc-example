@@ -9,7 +9,7 @@ JSON-RPC with the mux and middleware.
 ### Install
 
 ```
-go get github.com/bakins/json-rpc-example
+go get github.com/sithu/json-rpc-example
 ```
 
 Start the  server:
