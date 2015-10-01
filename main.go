@@ -2,10 +2,8 @@ package main
 
 import (
 	"errors"
-	_ "expvar"
 	"log"
 	"net/http"
-	_ "net/http/pprof"
 	"os"
 
 	"github.com/bakins/net-http-recover"
@@ -60,9 +58,6 @@ func main() {
 			return recovery.Handler(os.Stderr, h, true)
 		})
 
-	// httprof and expvar endpoints
-	r.PathPrefix("/debug/").Handler(chain.Then(http.DefaultServeMux))
-
-	r.Handle("/rpc", chain.Then(s))
+    r.Handle("/rpc", chain.Then(s))
 	log.Fatal(http.ListenAndServe(":8080", r))
 }

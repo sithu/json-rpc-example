@@ -9,13 +9,14 @@ JSON-RPC with the mux and middleware.
 ### Install
 
 ```
-go install github.com/bakins/json-rpc-example
+go get github.com/bakins/json-rpc-example
 ```
 
 Start the  server:
 
 ```
-json-rpc-example
+cd json-rpc-example
+go run main.go
 ```
 
 ### Make RPC calls using curl
